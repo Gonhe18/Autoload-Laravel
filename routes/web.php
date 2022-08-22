@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\Auth\FacebookController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,5 +30,13 @@ Route::middleware([
 
 
 // Rutas login Google
-Route::get('/auth/redirect', [GoogleController::class, 'googleRedirect']);
-Route::get('/auth/callback', [GoogleController::class, 'googleCallback']);
+Route::get('/auth/google/redirect', [GoogleController::class, 'driverRedirect']);
+Route::get('/auth/google/callback', [GoogleController::class, 'driverCallback']);
+
+// Rutas login Facebook
+Route::get('/auth/facebook/redirect', [FacebookController::class, 'driverRedirect']);
+Route::get('/auth/facebook/callback', [FacebookController::class, 'driverCallback']);
+
+// // Rutas login Twitter
+// Route::get('/auth/twitter/redirect', [TwitterController::class, 'twitterRedirect']);
+// Route::get('/auth/twitter/callback', [TwitterController::class, 'twitterCallback']);

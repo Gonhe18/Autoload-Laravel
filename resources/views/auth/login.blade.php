@@ -16,6 +16,16 @@
          <x-jet-danger-button class="ml-2" onclick="loginGoogle()">
             <span>Login Google</span>
          </x-jet-danger-button>
+
+         <x-jet-danger-button class="ml-2" onclick="loginFacebook()">
+            <span>Login Facebook</span>
+         </x-jet-danger-button>
+
+         <!-- <x-jet-danger-button class="ml-2" onclick="loginTwitter()">
+            <span>Login Facebook</span>
+         </x-jet-danger-button> -->
+
+
       </div>
 
       <form method="POST" action="{{ route('login') }}">
